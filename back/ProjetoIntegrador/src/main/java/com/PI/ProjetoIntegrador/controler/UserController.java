@@ -23,14 +23,15 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/loggin")
+    @PostMapping("/logging")
     public ResponseEntity<UserLogin> Authentication(@RequestBody Optional<UserLogin> user){
-        return userService.signIn(user).map(resp -> ResponseEntity.ok(resp))
+        return userService.signIn(user).map(ResponseEntity::ok)
                 .orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
     }
 
     @PostMapping("/registration")
     public ResponseEntity<User> Post(@Valid @RequestBody User user){
+
         return userService.userRegistration(user);
     }
 }

@@ -20,7 +20,7 @@ public class UserService {
         private UserRepository repository;
 
         public ResponseEntity<User> userRegistration(User user){
-            if (repository.findByEmail(user.getEmail()).isBlank()){
+            if (repository.findByEmail(user.getEmail()) == null){
                 BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
                 String  passwordEncoder = encoder.encode(user.getPassword());
                 user.setPassword(passwordEncoder);
