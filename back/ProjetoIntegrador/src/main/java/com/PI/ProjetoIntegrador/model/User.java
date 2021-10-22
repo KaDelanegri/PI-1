@@ -32,7 +32,6 @@ public class User {
     @NotBlank
     private String password;
 
-    @JsonProperty("vocational_test")
     private String vocationalTest;
 
     public long getId() {
