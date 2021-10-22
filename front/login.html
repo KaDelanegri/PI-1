@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <link href="css/style.css" rel="stylesheet">
+<style>
+    #main-wrapper {
+        width: 100%;
+    }
+	.container-fluid {
+		width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+   } 
+   .justify-content-center {
+		-webkit-box-pack: center !important;
+		-ms-flex-pack: center !important;
+		justify-content: center !important;
+		display: flex;
+        align-items: center;
+   }  
+   .login-content {
+    margin: 46px 0;
+   }   
+   .login-form {
+		background: #f9f9f9;
+		padding: 27px;
+		border-radius: 2px;
+   }
+   span.login-logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		background-color: #fff;
+		margin: 0 auto;
+    }
+	.login-logo {
+		text-align: center;
+		margin-bottom: 15px;
+    }
+	.login-form h4 {
+		color: #455a64;
+		text-align: center;
+		margin-bottom: 50px;
+		text-align: center;
+		font-family: Poppins-Medium;
+		font-size: 30px;
+		text-align: center;
+		text-transform: uppercase;
+		display: block;
+		font-family: 'Poppins', sans-serif;
+		padding-top: 17px;
+    }
+	body {
+		background-image: url('img/fundo.jpg');
+		background-size: cover;
+		background-position: bottom;
+		background-repeat: no-repeat;
+		width: 100%;
+		background-attachment: fixed;
+		color: #0009;
+   }
+   span.login-logo::before {
+    content: url('img/logo2.png');
+  }
+	
+ </style>
+</head>
+<body>
+
+<div class="main-wrapper"> 
+            <div class="unix-login">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 col-sm-5 col-xs-8 col-lg-4">
+                            <div class="login-content">
+                                <div class="login-form">
+                                    <span class="login-logo">
+                                        <i class="icon-logo"></i>
+                                    </span>
+                                    <h4>CETI</h4>
+                                    <form>
+                                            <label>Usuário</label>
+                                        <div class="input-group col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:8px">
+                                            <input class="form-control" name="login-usuario" name="login-usuario" type="text">
+                                        </div>
+                                        <label>Senha</label>
+                                        <div class="input-group col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:8px">
+                                            <input class="form-control" name="login-senha" name="login-senha" type="password">
+                                        </div>
+										<button type="button" id="btn-logar" style="margin-top:22px" class="btn btn-primary btn-flat " data-toggle="modal" data-target="#modal-cadastrar">CADASTRAR</button>
+                                        <button type="submit" id="btn-logar" style="margin-top:22px" class="btn btn-primary btn-flat btn-login ">LOGAR</button>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+		
+		<!-- Modal -->
+<div class="modal fade" id="modal-cadastrar" tabindex="-1" role="dialog"  aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cadastrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+			<label>Usuário</label>
+			<div class="input-group col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:8px">
+				<input class="form-control" name="cad-usuario" id="cad-usuario" type="text">
+			</div>
+			  <label>E-mail</label>
+			<div class="input-group col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:8px">
+				<input class="form-control" name="cad-email" id="cad-email" type="text">
+			</div>
+			<label>Senha</label>
+			<div class="input-group col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:8px">
+				<input class="form-control" name="cad-senha" id="cad-senha" type="password">
+			</div>
+			<button type="submit" id="btn-logar" style="margin-top:22px" class="btn btn-primary btn-flat btn-login ">Salvar</button>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
