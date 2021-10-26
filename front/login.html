@@ -7,6 +7,7 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
   <link href="css/style.css" rel="stylesheet">
 <style>
@@ -99,8 +100,8 @@
                                         <div class="input-group col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:8px">
                                             <input class="form-control" name="login-senha" name="login-senha" type="password">
                                         </div>
-										<button type="button" id="btn-logar" style="margin-top:22px" class="btn btn-primary btn-flat " data-toggle="modal" data-target="#modal-cadastrar">CADASTRAR</button>
-                                        <button type="submit" id="btn-logar" style="margin-top:22px" class="btn btn-primary btn-flat btn-login ">LOGAR</button>
+										<button type="button" id="btn-cadastrar" style="margin-top:22px" class="btn btn-primary btn-flat " data-toggle="modal" data-target="#modal-cadastrar">CADASTRAR</button>
+                                        <button type="button" id="btn-logar" style="margin-top:22px" class="btn btn-primary btn-flat btn-login ">LOGAR</button>
                                     </form>
                                 </div>
 
@@ -145,6 +146,12 @@
   </div>
 </div>
 
+
+<script>
+  $('#btn-logar').on('click',function(){
+     alert('login');
+  })
+</script>
 </body>
 </html>
 
