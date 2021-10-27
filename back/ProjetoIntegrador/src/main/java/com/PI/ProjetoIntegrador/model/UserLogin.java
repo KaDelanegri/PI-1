@@ -10,6 +10,10 @@ public class UserLogin {
 
     private String token;
 
+    private String photo;
+
+    private String vocationalTest;
+
     public String getUsername() {
         return username;
     }
@@ -40,5 +44,21 @@ public class UserLogin {
 
     public void setToken(final String token) {
         this.token = token;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(final String photo) {
+        this.photo = photo;
+    }
+
+    public String getVocationalTest() {
+        return vocationalTest;
+    }
+
+    public void setVocationalTest(final String vocationalTest) {
+        this.vocationalTest = vocationalTest;
     }
 }

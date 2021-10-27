@@ -34,6 +34,8 @@ public class User {
 
     private String vocationalTest;
 
+    private String photo;
+
     public long getId() {
         return id;
     }
@@ -72,5 +74,13 @@ public class User {
 
     public void setVocationalTest(final String vocationalTest) {
         this.vocationalTest = vocationalTest;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(final String photo) {
+        this.photo = photo;
     }
 }

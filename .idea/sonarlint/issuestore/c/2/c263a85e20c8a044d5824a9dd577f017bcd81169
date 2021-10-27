@@ -1,0 +1,6 @@
+
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÑ»Ïÿÿÿÿÿ
+h	java:S100!"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ£àıÿÿÿÿ
+[
+java:S4684!"@Replace this persistent entity with a simple POJO or DTO object.(ˆ£àıÿÿÿÿ
+m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ùê
