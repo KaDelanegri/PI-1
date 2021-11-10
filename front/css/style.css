@@ -11,7 +11,26 @@ body {
     margin: 0px !important;
     font-size:13px;
 }
-
+.card{
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid rgba(0,0,0,.125);
+	border-radius: .25rem;
+	width: 287px;
+}
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
 ul li {
     list-style: none;
 }
@@ -700,6 +719,102 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 
 .sidebar-closed #sidebar {
     margin-left: -180px;
+}
+
+.bloco-video {
+  padding: 0px 36px;
+  width: 100%;
+}
+.bloco-video h1 {
+  font-family: var(--font-ibm-plex-sans);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-title);
+  margin-bottom: 20px;
+}
+.bloco-video details {
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.05);
+  border-left: 15px solid gray;
+  padding: 15px;
+}
+.bloco-video details {
+  margin-top: 15px;
+}
+
+.bloco-video details.info {
+  background: #4ecdc417;
+  border-left-color: #4ecdc4;
+}
+.bloco-video details.info p {
+  list-style-type: corona-info;
+}
+
+
+.bloco-video details summary, .card details p {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  font-family: var(--font-ibm-plex-sans);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: var(--color-title);
+  padding: 20px;
+  cursor: pointer;
+}
+.bloco-video details summary::-webkit-details-marker, .card details p::-webkit-details-marker {
+  display: none;
+}
+.bloco-video details summary:focus, .card details p:focus {
+  outline: solid 3px var(--highlight);
+}
+.bloco-video details summary::-moz-selection, .card details p::-moz-selection {
+  background-color: var(--highlight);
+}
+.bloco-video details summary::selection, .card details p::selection {
+  background-color: var(--highlight);
+}
+.bloco-video details p {
+  display: list-item;
+  cursor: default;
+  margin-left: 3rem;
+  list-style-type: corona;
+}
+.bloco-video details summary::before {
+  cursor: pointer;
+  position: absolute;
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
+  left: 0rem;
+  margin-right: 0.5rem;
+  content: url("data:image/svg+xml,%3Csvg width='100%' height='100%' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.6066 12H1.3934' stroke='%23202842' stroke-width='1.875' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 1.39343V22.6066' stroke='%23202842' stroke-width='1.875' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.bloco-video details[open] summary {
+  font-weight: 700;
+}
+.bloco-video details[open] summary::before {
+  transform: rotate(45deg);
+  content: url("data:image/svg+xml,%3Csvg width='100%' height='100%' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.6066 12H1.3934' stroke='%23202842' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 1.39343V22.6066' stroke='%23202842' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.embed{
+position:relative;
+width:100%;
+padding-bottom:56.25%
+}
+
+.embed iframe{
+position:absolute;
+width:100%;
+height:100%;
+border:none;
 }
 
 
