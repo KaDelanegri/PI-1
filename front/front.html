@@ -5,16 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Cursos</title>
+  <title>UX</title>
 
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
   
   <link href="css/style.css" rel="stylesheet">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
+ 
  
 </head>
 
@@ -32,7 +30,7 @@
       </div>
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
-          <li><a class="logout" href="index.html">Logout</a></li>
+          <li><a class="logout" href="#">Logout</a></li>
         </ul>
       </div>
     </header>
@@ -46,13 +44,13 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
           <li class="mt">
-            <a href="perfil.html">
+            <a class="active" href="perfil.html">
               <i class="fa fa-dashboard"></i>
               <span>Perfil</span>
               </a>
           </li>
           <li>
-            <a class="active" href="cursos.html">
+            <a href="cursos.html">
               <i class="fa fa-video-camera"></i>
               <span>Cursos </span>
               </a>
@@ -69,60 +67,30 @@
     <section id="main-content">
       <section class="wrapper">
         <div class="row">
-         <div class="col-lg-12 main-chart">
+          <div class="col-lg-12 main-chart">
             
             <div class="border-head">
-
-              <h3>CURSOS</h3>
-
+              <h3>UX</h3>
             </div>
             <div class="row mt">
-                <div class="col-md-3" style="margin-right: 10px;">
-					<div class="card" >
-					  <img class="card-img-top" src="img/ux.png" alt="ux" style="width: 286px;height: 180px;">
-					  <div class="card-body">
-						<h5 class="card-title">UX</h5>
-						<p class="card-text">Para connhecer o curso clique no botão abaixo</p>
-						<a href="ux.html" class="btn btn-primary">Iniciar</a>
-					  </div>
-					</div>
-				</div>
-				<div class="col-md-3" style="margin-right: 10px;">
-					<div class="card">
-					  <img class="card-img-top" src="img/cientistadedados.jpg" alt="ux" style="width: 286px;height: 180px;">
-					  <div class="card-body">
-						<h5 class="card-title">Cientista de Dados</h5>
-						<p class="card-text">Para connhecer o curso clique no botão abaixo</p>
-						<a href="cienciaDeDados.html" class="btn btn-primary">Iniciar</a>
-					  </div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="card" >
-					  <img class="card-img-top" src="img/frontend.jpg" alt="ux" style="width: 286px;height: 180px;">
-					  <div class="card-body">
-						<h5 class="card-title">FrontEnd</h5>
-						<p class="card-text">Para connhecer o curso clique no botão abaixo</p>
-						<a href="front.html" class="btn btn-primary">Iniciar</a>
-					  </div>
-					</div>
-				</div>
+                <div class="bloco-video">
+					  
+					  <details class="info">
+						<summary>Aula 1</summary>
+						    <div class="embed">
+						        <iframe  src="https://www.youtube.com/embed/FJhMCi07T4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					        </div>
+					  </details>
+					  
+					  <details class="info" >
+						<summary>Aula 2</summary>
+						<div class="embed">
+							<iframe  src="https://www.youtube.com/embed/c9Wg6Cb_YlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					    </div>
+					  </details>
+					  
+			    </div>
             </div>
-			
-			<div class="row mt">
-			<div class="col-md-3">
-				<div class="card" >
-					  <img class="card-img-top" src="img/backend.jpg" alt="ux" style="width: 286px;height: 180px;">
-					  <div class="card-body">
-						<h5 class="card-title">BackEnd</h5>
-						<p class="card-text">Para connhecer o curso clique no botão abaixo</p>
-						<a href="back.html" class="btn btn-primary">Iniciar</a>
-					  </div>
-					</div>
-			</div>
-			</div>
-			
-        </div>
           </div>
         </div>
       </section>

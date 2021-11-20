@@ -11,6 +11,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.sql.Blob;
 
 @Entity
 @Table(name = "tb_user")
@@ -34,7 +35,7 @@ public class User {
 
     private String vocationalTest;
 
-    private String photo;
+    private Blob photo;
 
     public long getId() {
         return id;
@@ -76,11 +77,11 @@ public class User {
         this.vocationalTest = vocationalTest;
     }
 
-    public String getPhoto() {
+    public Blob getPhoto() {
         return photo;
     }
 
-    public void setPhoto(final String photo) {
+    public void setPhoto(final Blob photo) {
         this.photo = photo;
     }
 }

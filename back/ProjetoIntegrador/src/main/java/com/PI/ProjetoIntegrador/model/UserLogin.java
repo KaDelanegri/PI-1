@@ -1,5 +1,7 @@
 package com.PI.ProjetoIntegrador.model;
 
+import java.sql.Blob;
+
 public class UserLogin {
 
     private String username;
@@ -10,7 +12,7 @@ public class UserLogin {
 
     private String token;
 
-    private String photo;
+    private Blob photo;
 
     private String vocationalTest;
 
@@ -46,11 +48,11 @@ public class UserLogin {
         this.token = token;
     }
 
-    public String getPhoto() {
+    public Blob getPhoto() {
         return photo;
     }
 
-    public void setPhoto(final String photo) {
+    public void setPhoto(final Blob photo) {
         this.photo = photo;
     }
 

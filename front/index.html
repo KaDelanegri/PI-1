@@ -126,7 +126,7 @@
 
   <!-- Modal -->
   <div class="modal fade" id="modal-cadastrar" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-dialog modal-md" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Cadastrar</h5>
@@ -136,6 +136,10 @@
         </div>
         <div class="modal-body">
           <form>
+            <label>Foto</label>
+            <div class="input-group col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:8px">
+              <img id="myImg" src="img/account.png" style="width:110px; margin-bottom: 10px;"><br><input type='file' />
+            </div>
             <label>Usuário</label>
             <div class="input-group col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:8px">
               <input class="form-control" name="cad-usuario" id="cad-usuario" type="text">
@@ -148,7 +152,7 @@
             <div class="input-group col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom:8px">
               <input class="form-control" name="cad-senha" id="cad-senha" type="password">
             </div>
-            <button type="submit" id="btn-logar" style="margin-top:22px"
+            <button type="button" id="btn-cadastrar-modal" style="margin-top:22px"
               class="btn btn-primary btn-flat btn-login ">Salvar</button>
           </form>
         </div>
@@ -162,7 +166,7 @@
 
   <script>
     $('#btn-logar').on('click', function () {
-    
+
       var username = $("#login-usuario").val();
       var password = $("#login-senha").val();
 
@@ -176,17 +180,86 @@
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
         url: 'http://localhost:8080/user/logging',
-        data:JSON.stringify(dados),
-        statusCode: {400: function() {alert( "User not found !!" );}},
-        success(result){ 
+        data: JSON.stringify(dados),
+        statusCode: { 400: function () { alert("User not found !!"); } },
+        success(result) {
           var token = result.token;
-          if(token != ""){
+          if (token != "") {
             window.location.href = "perfil.html";
           }
-         },
-        error(result) { alert("Erro ao realizar consulta.")}
+        },
+        error(result) { alert("Erro ao realizar consulta.") }
       })
     })
+
+    let validos = /(\.jpg|\.png)$/i;
+    window.addEventListener('load', function () {
+      document.querySelector('input[type="file"]').addEventListener('change', function (e) {
+        base64String = ""
+        let fileInput = $(this);
+        let nome = fileInput.get(0).files["0"].name;
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        if (this.files && this.files[0]) {
+          var img = document.querySelector('img');
+          img.onload = () => {
+            URL.revokeObjectURL(img.src);
+          }
+          if (validos.test(nome)) {
+            reader.onloadend = () => {
+              base64String = reader.result
+                .replace("data:", "")
+                .replace(/^.+,/, "");
+              console.log(base64String);
+              $('#myImg').attr('src', "data:image/png;base64," + base64String);
+            };
+            reader.readAsDataURL(file);
+
+          } else {
+            console.log("Inválido")
+          }
+        }
+      });
+    });
+
+    function check_multifile_logo(file) {
+      var extension = file.substr((file.lastIndexOf('.') + 1))
+      if (extension === 'jpg' || extension === 'jpeg' || extension === 'gif' || extension === 'png' || extension === 'bmp') {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    $('#btn-cadastrar-modal').on('click', function () {
+
+      var username = $("#cad-usuario").val();
+      var password = $("#cad-senha").val();
+      var email = $("#cad-email").val();
+
+      var dados = {
+        "photo":base64String,
+        "username": username,
+        "email":email,
+        "password": password
+      };
+
+      $.ajax({
+        type: 'POST',
+        dataType: 'json',
+        contentType: "application/json; charset=utf-8",
+        url: 'http://localhost:8080/user/registration',
+        data: JSON.stringify(dados),
+        statusCode: { 409: function () { alert("Erro ao cadastrar"); } },
+        success(result) {
+        alert(result + "Cadastro realizado com sucesso !")
+        },
+        // error(result) { alert("") }
+      })
+    })
+
+    $(document).ready(function () {
+       base64String = ""
+      });
   </script>
 </body>
 
